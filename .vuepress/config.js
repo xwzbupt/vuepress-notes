@@ -12,8 +12,8 @@ module.exports = {
     locales: {
         "/": {
             lang: "zh-CN",
-            title: "Java 全栈知识体系",
-            description: "包含: Java 基础, Java 部分源码, JVM, Spring, Spring Boot, Spring Cloud, 数据库原理, MySQL, ElasticSearch, MongoDB, Docker, k8s, CI&CD, Linux, DevOps, 分布式, 中间件, 开发工具, Git, IDE, 源码阅读，读书笔记, 开源项目..."
+            title: "Weiser的笔记",
+            description: "包含：算法"
         }
     },
     head: [
@@ -33,22 +33,33 @@ module.exports = {
                 margin: 16
             }
         }
-    },
+    }, 
     themeConfig: {
-        docsRepo: "realpdai/tech-arch-doc",
-        editLinks: true,
-        sidebarDepth:0,
-        locales: {
-            "/": {
-                label: "简体中文",
-                selectText: "Languages",
-                editLinkText: "在 GitHub 上编辑此页",
-                lastUpdated: "上次更新",
-                nav: [
-                ],
-                sidebar: {
-                }
+        nav: [
+            { text: '主页', link: '/' },
+            {
+                text: '知识库',
+                items: [
+                    { text: 'FAQ', link: '/KnowledgeBase/FAQ/1.AWTK' },
+                    { text: 'HowTo', link: '/KnowledgeBase/HowTo/api_doc' }
+                ]
+            },
+            {
+                text: '了解更多',
+                items: [
+                    { text: 'AWTK 官网', link: 'https://www.zlg.cn/index/pub/awtk.html' },
+                    { text: 'AWTK 云平台', link: 'https://awtk.zlg.cn/' },
+                    { text: 'GitHub 仓库', link: 'https://github.com/zlgopen/awtk' },
+                    { text: 'Gitee 仓库', link: 'https://gitee.com/zlgopen/awtk' },
+                ]
             }
-        }
+        ],
+        sidebar: [
+            {
+              title: 'Guide',
+              collapsable: false,
+              children: ['/guide/']
+            }
+        ]
     }
 };
