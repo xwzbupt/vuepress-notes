@@ -1,0 +1,54 @@
+Arguments: 
+  /usr/local/node/bin/node /usr/local/node/bin/yarn
+
+PATH: 
+  /usr/local/node/bin:/usr/local/node/bin:/usr/local/node/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin:/usr/local/yarn/bin:/usr/local/yarn
+
+Yarn version: 
+  1.12.0
+
+Node version: 
+  12.17.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/vuepress-notes/package.json: Unexpected string in JSON at position 226
+      at JSON.parse (<anonymous>)
+      at /usr/local/yarn/yarn/lib/cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/yarn/yarn/lib/cli.js:92:30)
+      at /usr/local/yarn/yarn/lib/cli.js:103:13
+
+npm manifest: 
+  {
+    "name": "vuepress-notes",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "dev": "vuepress dev",
+      "build": "vuepress build"
+    },
+    "devDependencies": {
+      "vuepress": "^1.0.0"
+    }
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/xwzbupt/vuepress-notes.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/xwzbupt/vuepress-notes/issues"
+    },
+    "homepage": "https://github.com/xwzbupt/vuepress-notes#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
