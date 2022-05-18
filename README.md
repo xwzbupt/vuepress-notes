@@ -2,7 +2,7 @@
 home: true
 heroImage: /_images/index-read.gif
 actionText: 快速开始 →
-actionLink: /md/java/basic/java-basic-oop.md
+actionLink: /doc/
 features:
 - title: 夯实基础
   details: 不积跬步无以至千里, 仰望星空还需脚踏实地

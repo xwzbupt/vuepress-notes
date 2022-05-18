@@ -21,17 +21,52 @@ module.exports = {
         ["meta", {name: "robots", content: "all"}],
         ["meta", {name: "author", content: "pdai"}],
         ["meta", {name: "keywords", content: "Java 全栈知识体系, java体系, java知识体系, java框架,java详解,java学习路线,java spring, java面试, 知识体系, java技术体系, java编程, java编程指南,java开发体系, java开发,java教程,java,java数据结构, 算法, 开发基础"}],
-        ["meta", {name: "apple-mobile-web-app-capable", content: "yes"}]
+        ["meta", {name: "apple-mobile-web-app-capable", content: "yes"}],
     ],
     plugins: {
         '@vuepress/back-to-top': true,
+        // 'vuepress-plugin-auto-sidebar': {
+        //       titleMode: "titlecase", // 标题模式
+        //       collapsable: false,     // 设置为true,开启折叠
+        //       sidebarDepth: 0,    // 标题的深度
+        //       collapseList: [
+        //         // 折叠的路由列表
+        //         //"/frontend/css/"
+        //       ],
+        //       uncollapseList: [
+        //         // 不折叠的路由列表
+        //       ]
+        // },
+        //latex插件，本身就不支持$2^2$这种公式
+        '@renovamen/katex': true,
+        //mathjax插件的两种写法，好像都对
+        'mathjax': true,
+        'vuepress-plugin-mathjax': true,
+        //滚动时自动激活侧边栏链接插件
+        '@vuepress/active-header-links': {
+            sidebarLinkSelector: ".sidebar-link",
+            headerAnchorSelector: ".header-anchor",
+        },
+        //滚动时的进度条插件
+        '@vuepress/nprogress': true,
+        //图片缩放插件
         '@vuepress/medium-zoom': {
-            selector: 'img.zoom-custom-imgs',
+	    selector: '.theme-container :not(a) img',
             // medium-zoom options here
             // See: https://github.com/francoischalifour/medium-zoom#options
             options: {
                 margin: 16
             }
+        },
+        'vuepress-plugin-nuggets-style-copy': {
+            copyText: "复制代码",
+            tip: {
+                content: "复制成功"
+            }
+        },
+        '@vuepress/active-header-links': {
+            sidebarLinkSelector: ".sidebar-link",
+            headerAnchorSelector: ".header-anchor",
         }
     }, 
     themeConfig: {
@@ -49,17 +84,21 @@ module.exports = {
                 items: [
                     { text: 'AWTK 官网', link: 'https://www.zlg.cn/index/pub/awtk.html' },
                     { text: 'AWTK 云平台', link: 'https://awtk.zlg.cn/' },
-                    { text: 'GitHub 仓库', link: 'https://github.com/zlgopen/awtk' },
+                    { text: 'GitHub 仓库', link: 'https://github.com/xwzbupt/vuepress-notes'},
                     { text: 'Gitee 仓库', link: 'https://gitee.com/zlgopen/awtk' },
                 ]
             }
         ],
-        sidebar: [
-            {
-              title: 'Guide',
-              collapsable: false,
-              children: ['/guide/']
-            }
-        ]
-    }
+        sidebar: {
+            '/algorithm/二叉树': [
+                {
+                    title: '二叉树',
+                    collapsable: true,
+                    children: [
+                        ['', '二叉树']
+                    ]
+                },
+            ]
+        }
+    },
 };
