@@ -27,11 +27,10 @@ module.exports = {
         '@vuepress/back-to-top': true,
         // 'vuepress-plugin-auto-sidebar': {
         //       titleMode: "titlecase", // 标题模式
-        //       collapsable: false,     // 设置为true,开启折叠
+        //       collapsable: true,     // 设置为true,开启折叠
         //       sidebarDepth: 0,    // 标题的深度
         //       collapseList: [
-        //         // 折叠的路由列表
-        //         //"/frontend/css/"
+        //         '/algorithm'
         //       ],
         //       uncollapseList: [
         //         // 不折叠的路由列表
@@ -66,7 +65,7 @@ module.exports = {
         },
         '@vuepress/active-header-links': {
             sidebarLinkSelector: ".sidebar-link",
-            headerAnchorSelector: ".header-anchor",
+            headerAnchorSelector: ".header-anchor"
         }
     }, 
     themeConfig: {
@@ -90,13 +89,14 @@ module.exports = {
             }
         ],
         sidebar: {
-            '/algorithm/二叉树': [
+            '/doc/algorithm/整数/': [
+                '1.整数专题',
+                '整数'
+            ],          
+            '/doc/algorithm/二叉树/': [
                 {
-                    title: '二叉树',
-                    collapsable: true,
-                    children: [
-                        ['', '二叉树']
-                    ]
+                    title: '1',
+                    Children: ['', '二叉树']
                 },
             ]
         }
